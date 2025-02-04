@@ -86,15 +86,15 @@
             </a>
         </li>
         <hr>
-        <li class="li-home">
-            <a href="<?php echo BASE_URL?>/pages/profile.php">
+        <!-- <li class="li-home">
+            <a href="<?php // echo BASE_URL?>/pages/profile.php">
                 <span class="icon">
                     <i class="fa-solid fa-house-user"></i>
                 </span>
                 <span class="title">Profile</span>
             </a>
         </li>
-        <hr>
+        <hr> -->
         <li class="li-first">
             <a href="<?php echo BASE_URL?>/pages/search.php">
                 <span class="icon">
@@ -103,14 +103,14 @@
                 <span class="title">Browse Books</span>
             </a>
         </li>
-        <li class="li-second">
-            <a href="<?php echo BASE_URL?>/pages/profile.php">
+        <!-- <li class="li-second">
+            <a href="<?php // echo BASE_URL?>/pages/profile.php">
                 <span class="icon">
                     <i class="fa-regular fa-address-card"></i>
                 </span>
                 <span class="title">Reserve Books</span>
             </a>
-        </li>
+        </li> -->
         <hr>
         <li>
             <a href="<?php echo BASE_URL?>/includes/logout.php">

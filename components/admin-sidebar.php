@@ -1,7 +1,4 @@
-<?php 
-    // include_once('../config/config.php');
-    // include_once('../modules/styling.php');
-?>
+
 <style>
     <?php
         if ($_SESSION['currentPage'] == "Dashboard"){ 
@@ -86,15 +83,15 @@
                 </span>
             </a>
         </li>
-        <hr>
+        <!-- <hr>
         <li class="li-dash">
-            <a href="<?php echo BASE_URL?>/pages/admin/dashboard.php">
+            <a href="<?php // echo BASE_URL?>/pages/admin/dashboard.php">
                 <span class="icon">
                     <i class="fa-solid fa-chart-line"></i>
                 </span>
                 <span class="title">Admin Dashboard</span>
             </a>
-        </li>
+        </li> -->
         <hr>
         <li class="li-first">
             <a href="<?php echo BASE_URL?>/pages/admin/book_mngmt.php">
