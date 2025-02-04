@@ -7,7 +7,6 @@
     $username = $_POST['username']; 
     $password = $_POST['password'];
 
-    // Check if the user exists in the users table with the provided credentials
     $sqlLogin = "SELECT * FROM users WHERE (username='{$username}' OR email='{$username}')"; 
     $result = $conn->query($sqlLogin);
 
@@ -22,7 +21,6 @@
         } else {
             // If the password is plain-text, manually check it
             if ($user['password'] === $password) {
-                // Hash password and store it
                 $hashedPassword = password_hash($password, PASSWORD_DEFAULT);
 
                 // Update the database with the hashed password
@@ -31,11 +29,9 @@
                 $stmt->bind_param("si", $hashedPassword, $user['id']);
                 $stmt->execute();
 
-                // Log the user in
                 $_SESSION['authenticated'] = "TRUE";
                 $_SESSION['userID'] = $user['id'];
             } else {
-                // Password is incorrect
                 $_SESSION["error_message"] = "Invalid Password!";
                 header('Location: '. BASE_URL .'/pages/login.php');
                 exit();
@@ -45,11 +41,14 @@
         // If the user is an admin
         if ($user['accountType_id'] == 1) {
             $_SESSION['admin'] = "TRUE";
+            header('Location: '. BASE_URL . '/pages/admin/dash.php');
+            exit();
+        }else{
+            // Else redirect to home page
+            header('Location: '. BASE_URL . '/pages/home.php');
+            exit();
         }
 
-        // Redirect to home page
-        header('Location: '. BASE_URL . '/pages/home.php');
-        exit();
         
     } else {
         $_SESSION["error_message"] = "Invalid User!";
