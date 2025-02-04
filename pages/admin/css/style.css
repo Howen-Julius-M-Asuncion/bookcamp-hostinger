@@ -1,0 +1,38 @@
+/* =========== Sidebar Fix =========== */
+.navigation ul li a .icon {
+    /* position: relative;
+    display: block;
+    min-width: 60px;
+    height: 60px; */
+    line-height: 0 !important;
+    /* text-align: center; */
+}
+
+/* =========== BS5 Adjustments =========== */
+.container-fluid {
+    --bs-gutter-x: 0 !important;
+}
+
+/* =========== Table Format =========== */
+:root {
+    --dt-row-selected: 194,194,194 !important;
+    --dt-row-selected-text: 0,0,0 !important;
+}
+
+.search input, .dt-search input {
+    border: 1px #ccc !important;
+    border-style: none none solid none !important;
+}
+
+/* Remove focus highlight */
+input:focus {
+    outline:none !important;
+    outline-width: 0 !important;
+    box-shadow: none;
+}
+
+.select-info {
+    color: limegreen;
+    font-weight: bold;
+}
+
