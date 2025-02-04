@@ -14,7 +14,7 @@
                 color: var(--blue);
             }
             ';
-        }else if ($_SESSION['currentPage'] == "Dashboard"){ 
+        }else if ($_SESSION['currentPage'] == "NOT USED"){ 
             echo '
             .navigation .li-dash {
                 background-color: var(--gray);
@@ -24,43 +24,43 @@
                 color: var(--blue);
             }
             ';
-        }else if ($_SESSION['currentPage'] == "Users"){ 
+        }else if ($_SESSION['currentPage'] == "Browse"){ 
             echo '
-            .navigation .li-users {
+            .navigation .li-first {
                 background-color: var(--gray);
             }
             
-            .navigation .li-users a {
+            .navigation .li-first a {
                 color: var(--blue);
             }
             ';
-        }else if ($_SESSION['currentPage'] == "Sections"){ 
+        }else if ($_SESSION['currentPage'] == "Reserve"){ 
             echo '
-            .navigation .li-sections {
+            .navigation .li-second {
                 background-color: var(--gray);
             }
             
-            .navigation .li-sections a {
+            .navigation .li-second a {
                 color: var(--blue);
             }
             ';
-        }else if ($_SESSION['currentPage'] == "Courses"){ 
+        }else if ($_SESSION['currentPage'] == "NOT USED"){ 
             echo '
-            .navigation .li-courses {
+            .navigation .li-third {
                 background-color: var(--gray);
             }
             
-            .navigation .li-courses a {
+            .navigation .li-third a {
                 color: var(--blue);
             }
             ';
-        }else if ($_SESSION['currentPage'] == "Departments"){ 
+        }else if ($_SESSION['currentPage'] == "NOT USED"){ 
             echo '
-            .navigation .li-departments {
+            .navigation .li-fourth {
                 background-color: var(--gray);
             }
             
-            .navigation .li-departments a {
+            .navigation .li-fourth a {
                 color: var(--blue);
             }
             ';
@@ -87,7 +87,7 @@
         </li>
         <hr>
         <li class="li-home">
-            <a href="<?php echo BASE_URL?>/pages/home.php">
+            <a href="<?php echo BASE_URL?>/pages/profile.php">
                 <span class="icon">
                     <i class="fa-solid fa-house-user"></i>
                 </span>
@@ -95,7 +95,7 @@
             </a>
         </li>
         <hr>
-        <li class="li-dash">
+        <li class="li-first">
             <a href="<?php echo BASE_URL?>/pages/search.php">
                 <span class="icon">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -103,7 +103,7 @@
                 <span class="title">Browse Books</span>
             </a>
         </li>
-        <li class="li-dash">
+        <li class="li-second">
             <a href="<?php echo BASE_URL?>/pages/profile.php">
                 <span class="icon">
                     <i class="fa-regular fa-address-card"></i>
