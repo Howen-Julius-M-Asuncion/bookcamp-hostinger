@@ -1,6 +1,7 @@
 <?php
     session_start();
     include_once('../config/config.php');
+    include_once('../config/dbcon.php');
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -26,7 +27,7 @@
         <div class="">
             <div class="row">
                 <div class="col title mt-5">
-                    <img src="../public/images/hcc_logo.png" class="logo-landing">
+                    <img src="../public/hcc_logo.png" class="logo-landing">
                     <h1><strong>Holy Cross College<br><?php echo SITE_NAME?></strong></h1>
                 </div>
             </div>
@@ -42,7 +43,7 @@
                         if($debugModeAdmin == true){
                             echo "./admin/dashboard.php";
                         }else{
-                            echo "./profile.php";
+                            echo "./search.php";
                         }
                     }else{
                         echo "../includes/auth.php";

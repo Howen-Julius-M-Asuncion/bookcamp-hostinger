@@ -12,9 +12,15 @@
         }
     }else{
         if (!isset($_SESSION['authenticated']) || !$_SESSION['authenticated'] == "TRUE"){
-            $_SESSION["error_message"] = "Please Login First!";
-            header('Location: '. BASE_URL .'/pages/login.php');
-            exit();
+            if (!isset($_SESSION['admin']) || $_SESSION['admin'] == "TRUE"){
+                echo "<script>alert('You do not have permission to access this page!');</script>";
+                header('Location: '. BASE_URL .'/pages/search.php');
+                exit();
+            }else{
+                $_SESSION["error_message"] = "Please Login First!";
+                header('Location: '. BASE_URL .'/pages/login.php');
+                exit();
+            }
         }
     }
 
@@ -94,7 +100,7 @@
             <div class="bg-light rounded p-3 shadow-sm m-4">
             <div class="row px-3">
                     <div class="col d-flex justify-content-between my-2">
-                        <h4>User List</h4>
+                        <h4>Book Inventory</h4>
                         <div class="actions sticky-sm-top fs-6">
                             <form method="get" action="" id="actionsForm">
                                 <button type="button" class="btn btn-outline-success btn-sm" id="addEntryBtn"><i class="fa-solid fa-plus"></i>&nbsp;New Entry</button>
@@ -121,7 +127,6 @@
                         <tbody>
                             <?php
                                 $query = "SELECT * FROM books";
-
                                 
                                 $result = $conn->query($query);
                                     while($list=$result->fetch_assoc()){

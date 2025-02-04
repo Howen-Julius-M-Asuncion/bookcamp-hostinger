@@ -12,9 +12,15 @@
         }
     }else{
         if (!isset($_SESSION['authenticated']) || !$_SESSION['authenticated'] == "TRUE"){
-            $_SESSION["error_message"] = "Please Login First!";
-            header('Location: '. BASE_URL .'/pages/login.php');
-            exit();
+            if (!isset($_SESSION['admin']) || $_SESSION['admin'] == "TRUE"){
+                echo "<script>alert('You do not have permission to access this page!');</script>";
+                header('Location: '. BASE_URL .'/pages/search.php');
+                exit();
+            }else{
+                $_SESSION["error_message"] = "Please Login First!";
+                header('Location: '. BASE_URL .'/pages/login.php');
+                exit();
+            }
         }
     }
 

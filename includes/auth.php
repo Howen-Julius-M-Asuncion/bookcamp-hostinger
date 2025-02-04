@@ -41,13 +41,14 @@
         // If the user is an admin
         if ($user['accountType_id'] == 1) {
             $_SESSION['admin'] = "TRUE";
-            header('Location: '. BASE_URL . '/pages/admin/dash.php');
+            header('Location: '. BASE_URL . '/pages/admin/book_mngmt.php');
             exit();
         }else{
             // Else redirect to home page
-            header('Location: '. BASE_URL . '/pages/home.php');
+            header('Location: '. BASE_URL . '/pages/search.php');
             exit();
         }
+
 
         
     } else {
