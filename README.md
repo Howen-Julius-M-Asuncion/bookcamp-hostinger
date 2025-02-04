@@ -1,4 +1,4 @@
-## CampBook
+# CampBook
 
 A DevOps preliminary requirement project using PHP and mySQL database.
 
@@ -9,14 +9,26 @@ A DevOps preliminary requirement project using PHP and mySQL database.
     - [ ] Prevent Invalid Bypass to Files and Folders
         - [x] Root Folder
         - [x] Public
+        - [x] Admin
         - [ ] User .htaccess
-- [x] Dashboard Page for Admin
-    - [ ] Prevent Access for Admins
-- [ ] CRUD Operations for Admin Dashboard
-- [ ] User Home Page
-- [ ] User Profile Page
+
+- [ ] CRUD Management Pages for Admin
+    - [ ] User Management
+        - [ ] CRUD
+    - [x] Books Management
+        - [x] CRUD
+
+- [ ] Analytics for Admin Dashboard
 - [ ] Publish through Hostinger
 
+## DONE 
+- User Login Page
+- Navigation Components
+- Admin Dashboard
+- Prevent POST Duplicate CRUD Operations Using POST/REDIRECT/GET Pattern
 
-## DONE
-- [x] User Login Page
+## TO CONSIDER
+- User Home Page
+
+## REMOVED
+- User Profile Page
